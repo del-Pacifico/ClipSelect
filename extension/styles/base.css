@@ -1,0 +1,53 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ *
+ * Original Author: Sergio Palma Hidalgo
+ * Project URL: https://github.com/del-Pacifico/ClipSelect
+ * Copyright (c) 2026 Sergio Palma Hidalgo
+ */
+
+/* ==========================================================================
+   ClipSelect - base.css
+   Description: Shared base styles for popup and options pages.
+   License: MPL-2.0
+   ========================================================================== 
+*/
+
+:root {
+  --cs-bg: #121b3e;
+  --cs-text: #f4f4f4;
+  --cs-button-bg: #7090cb;
+  --cs-button-border: #4f5984;
+  --cs-button-hover-bg: #4f5984;
+  --cs-button-hover-border: #aaa8a6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  background-color: var(--cs-bg);
+  color: var(--cs-text);
+  font-family: Arial, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+}
