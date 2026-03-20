@@ -6,34 +6,34 @@ It explains how the extension components interact, how clipboard operations are 
 
 ---
 
-# 📑 Table of Contents
+## 📑 Table of Contents
 
 - [🏗 ClipSelect — Architecture](#-clipselect--architecture)
-- [📑 Table of Contents](#-table-of-contents)
-- [🧠 Architecture Overview](#-architecture-overview)
-- [🎯 Design Principles](#-design-principles)
+  - [📑 Table of Contents](#-table-of-contents)
+  - [🧠 Architecture Overview](#-architecture-overview)
+  - [🎯 Design Principles](#-design-principles)
     - [Explicit user control](#explicit-user-control)
     - [Minimal interference](#minimal-interference)
     - [Lightweight execution](#lightweight-execution)
     - [Privacy-first design](#privacy-first-design)
     - [Predictable behavior](#predictable-behavior)
-- [🧩 Extension Components](#-extension-components)
+  - [🧩 Extension Components](#-extension-components)
     - [Content Script](#content-script)
     - [Service Worker (Background)](#service-worker-background)
     - [Popup Interface](#popup-interface)
     - [Options Page](#options-page)
-- [🔄 Event Flow](#-event-flow)
-- [⌨️ Copy Trigger Mechanism](#️-copy-trigger-mechanism)
-- [📋 Clipboard Engine](#-clipboard-engine)
-- [⚙️ Configuration Layer](#️-configuration-layer)
-- [🧯 Error Handling Strategy](#-error-handling-strategy)
-- [⚡ Performance Considerations](#-performance-considerations)
-- [🔐 Security Considerations](#-security-considerations)
-- [🔮 Future Architectural Extensions](#-future-architectural-extensions)
+  - [🔄 Event Flow](#-event-flow)
+  - [⌨️ Copy Trigger Mechanism](#️-copy-trigger-mechanism)
+  - [📋 Clipboard Engine](#-clipboard-engine)
+  - [⚙️ Configuration Layer](#️-configuration-layer)
+  - [🧯 Error Handling Strategy](#-error-handling-strategy)
+  - [⚡ Performance Considerations](#-performance-considerations)
+  - [🔐 Security Considerations](#-security-considerations)
+  - [🔮 Future Architectural Extensions](#-future-architectural-extensions)
 
 ---
 
-# 🧠 Architecture Overview
+## 🧠 Architecture Overview
 
 ClipSelect is implemented as a **Manifest V3 browser extension**.
 
@@ -51,7 +51,7 @@ These layers work together to ensure that copy operations are always **intention
 
 ---
 
-# 🎯 Design Principles
+## 🎯 Design Principles
 
 The architecture of ClipSelect is guided by several core principles.
 
@@ -77,7 +77,7 @@ The extension should behave consistently across different websites and browsing 
 
 ---
 
-# 🧩 Extension Components
+## 🧩 Extension Components
 
 ClipSelect is composed of several components working together.
 
@@ -136,7 +136,7 @@ Possible settings include:
 
 ---
 
-# 🔄 Event Flow
+## 🔄 Event Flow
 
 The core workflow of ClipSelect follows a simple event-driven model.
 
@@ -157,7 +157,7 @@ If validation fails, the operation is aborted.
 
 ---
 
-# ⌨️ Copy Trigger Mechanism
+## ⌨️ Copy Trigger Mechanism
 
 The copy trigger mechanism defines **how users activate ClipSelect**.
 
@@ -178,7 +178,7 @@ The default trigger strategy is designed to avoid interfering with native browse
 
 ---
 
-# 📋 Clipboard Engine
+## 📋 Clipboard Engine
 
 The clipboard engine performs the final copy operation.
 
@@ -194,7 +194,7 @@ If clipboard access fails, the operation is aborted safely.
 
 ---
 
-# ⚙️ Configuration Layer
+## ⚙️ Configuration Layer
 
 User preferences are stored using the browser extension storage system.
 
@@ -208,7 +208,7 @@ Configuration values are retrieved by the service worker and communicated to con
 
 ---
 
-# 🧯 Error Handling Strategy
+## 🧯 Error Handling Strategy
 
 ClipSelect must gracefully handle scenarios where copying cannot be performed.
 
@@ -222,7 +222,7 @@ In these situations the system simply cancels the operation without affecting th
 
 ---
 
-# ⚡ Performance Considerations
+## ⚡ Performance Considerations
 
 ClipSelect is designed to be extremely lightweight.
 
@@ -237,7 +237,7 @@ The extension reacts only to user interaction events.
 
 ---
 
-# 🔐 Security Considerations
+## 🔐 Security Considerations
 
 Clipboard access can expose sensitive information if handled improperly.
 
@@ -252,7 +252,7 @@ All clipboard interactions occur only during **explicit user-triggered actions**
 
 ---
 
-# 🔮 Future Architectural Extensions
+## 🔮 Future Architectural Extensions
 
 Future versions of ClipSelect may expand functionality.
 
